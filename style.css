@@ -1,0 +1,147 @@
+/* Reset default margins, paddings, and set box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+body {
+  display: grid;
+  grid-template-rows: 1fr 3fr 4fr;
+  align-items: center;
+  justify-content: center;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-family: 'Noto Sans', sans-serif;
+  height: 100vh;
+  width: 100vw;
+}
+
+img {
+  object-fit: contain;
+}
+
+#nav {
+  display: flex;
+  width: 100vw;
+  padding: 2rem; /* Moved padding here from body */
+}
+
+input {
+  background-color: rgba(128, 128, 128, 0.3);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.5rem;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+input::placeholder {
+  color: white;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40vh;
+  height: 40vh;
+  background-color: darkorchid;
+  box-shadow: 5px 5px 5px;
+}
+
+/* ----- Second Row ----- */
+
+h1, h2, h3, p {
+  color: white;
+  line-height: 1;
+}
+
+#currWeather {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Changed from 100vw to 100% */
+  height: 30vh;
+  padding-left: 40px; /* Changed from margin-left to padding-left */
+}
+
+#conditions {
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+#address {
+  font-size: 3rem;
+}
+
+#info {
+  display: flex;
+  margin-top: 20px;
+}
+
+#temp {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 4em;
+  border-right: 1px solid lightgray;
+  padding: 20px;
+  position: relative;
+}
+
+#temp::after {
+  content: '°F';
+  font-size: 0.35em;
+  position: absolute;
+  top: 0.5em;
+  right: 0.2em;
+}
+
+#feels-like {
+  position: relative;
+}
+
+#feels-like::after {
+  content: '°F';
+  font-size: 0.7em;
+  position: absolute;
+  top: -0.3em;
+  right: 0.2em;
+}
+
+#specifics {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+}
+
+/*** ROW 3 ***/
+
+#forecast-div {
+  display: grid;
+  grid: 1fr / repeat(7, 1fr);
+  width: 100vw;
+  height: auto;
+}
+
+.forecast {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: rgba(128, 128, 128, 0.3);
+  box-shadow: 5px 5px 5px;
+  padding: 12px;
+  margin: 20px;
+
+}
